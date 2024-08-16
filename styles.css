@@ -1,0 +1,348 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ead5d5;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+nav .logo span {
+    color: #e74c3c;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a.donate {
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-buttons a button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for size */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* No underline */
+    font-size: 16px; /* Font size */
+}
+
+.social-buttons a button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.video-section {
+    width: 100%; /* Full width to ensure it fills the container */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px 0; /* Padding above and below the video */
+}
+
+video {
+    max-width: 100%; /* Ensures the video does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+.donation {
+    background-color: #e9f1ff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.donation-options button,
+.donation-options a button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Set a fixed width for all buttons */
+    height: 50px; /* Set a fixed height for all buttons */
+}
+
+.donation-options button img,
+.donation-options a button img {
+    width: 24px; /* Adjust as needed */
+    height: 24px; /* Adjust as needed */
+    margin-right: 0.5rem;
+}
+
+.donation-options button span,
+.donation-options a button span {
+    flex: 1; /* Take remaining space */
+    text-align: center; /* Center align text */
+}
+.hero {
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.hero img {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+.signup {
+    background-color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Custom Styles for Guide Section */
+.guide-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px; /* Limit the width for better readability */
+}
+
+.guide-column {
+    background-color: #ececec; /* Slightly darker background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.guide-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600; /* Bold to make it stand out */
+    text-align: center;
+}
+
+ol {
+    padding-left: 20px;
+    list-style-position: inside; /* Ensure the numbers are inside the padding */
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+ol li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1rem;
+    line-height: 1.5; /* Improve readability */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600; /* Slightly bolder to make links stand out */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        border-top: 1px solid #ddd;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav, .hero, .donation, .signup, form, footer {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 1rem 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .donation-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .donation-options button {
+        margin: 0.5rem 0;
+    }
+
+    /* Ensure guide columns stack on smaller screens */
+    .guide-section {
+        flex-direction: column;
+    }
+
+    .guide-column {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero img {
+        width: 150px;
+    }
+
+    .signup h3 {
+        font-size: 1.2rem;
+    }
+
+    form input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none; /* Default state is hidden */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        border-top: 1px solid #ddd;
+    }
+
+    nav ul.show {
+        display: flex; /* This will make the menu visible when the 'show' class is added */
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+}
